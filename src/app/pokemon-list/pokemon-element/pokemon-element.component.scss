@@ -1,3 +1,8 @@
+@mixin back {
+  border-radius: 15px;
+  box-shadow: 0 5px 5px 1px rgba(0,0,0,0.4);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -28,40 +33,60 @@ a {
       max-height: 96px;
     }
   }
+
+  &__type {
+    span {
+      padding: 2px;
+    }
+  }
 }
 
 .back-fire {
+  @include back;
   background: #f12711;
   background: -webkit-linear-gradient(to right, #f5af19, #f12711);
   background: linear-gradient(to right, #f5af19, #f12711);
 }
 
 .back-water {
+  @include back;
   background: #00B4DB;
   background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
   background: linear-gradient(to right, #0083B0, #00B4DB);
 }
 
 .back-grass {
+  @include back;
   background: #ADD100;
   background: -webkit-linear-gradient(to right, #7B920A, #ADD100);
   background: linear-gradient(to right, #7B920A, #ADD100);
 }
 
 .back-electric {
+  @include back;
   background: #F2994A;
   background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
   background: linear-gradient(to right, #F2C94C, #F2994A);
 }
 
 .back-generic {
+  @include back;
   background: #606c88;
   background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
   background: linear-gradient(to right, #3f4c6b, #606c88);
 }
 
 .back-fly {
+  @include back;
   background: #2980B9;
   background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
   background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+}
+
+.back-poison {
+  @include back;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #0f9b0f, #000000);
+  background: linear-gradient(to right, #0f9b0f, #000000);
+
 }

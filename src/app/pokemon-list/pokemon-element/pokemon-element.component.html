@@ -3,12 +3,15 @@
     <div class="pokemon_element">
       <div class="pokemon_element__text">
         <div class="pokemon_element__title">
-          {{ pokemon.name | uppercase }}
+          #{{ pokemon.id }}  {{ pokemon.name | uppercase }} <span></span>
         </div>
         <div class="pokemon_element__type">
           <ng-container *ngFor="let type of pokemon.types">
-            {{ type.type.name | uppercase}}
+            <span>{{ type.type.name | uppercase }}</span>
           </ng-container>
+        </div>
+        <div>
+          <small *ngIf="pokemon.evolvesFrom">Evolución de {{ pokemon.evolvesFrom.name }}</small>
         </div>
       </div>
       <div class="pokemon_element__img">
