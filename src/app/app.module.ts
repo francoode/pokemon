@@ -9,13 +9,15 @@ import {SyncService} from "./services/sync.service";
 import {HttpClientModule} from "@angular/common/http";
 import {PokemonService} from "./services/pokemon.service";
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+import { PokemonElementComponent } from './pokemon-list/pokemon-element/pokemon-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     PokemonListComponent,
-    PokemonDetailComponent
+    PokemonDetailComponent,
+    PokemonElementComponent
   ],
   imports: [
     BrowserModule,

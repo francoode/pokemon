@@ -18,6 +18,7 @@ export class PokemonListComponent implements OnInit {
 
     this.service.getAll().subscribe((p) => {
       this.pokemons.push(p);
+      console.log(this.pokemons);
     });
 
   }

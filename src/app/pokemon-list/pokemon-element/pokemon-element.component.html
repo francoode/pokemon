@@ -1,0 +1,19 @@
+<a [routerLink]="['/pokemon', pokemon.name]">
+  <div [className]="getTypeClass(pokemon)">
+    <div class="pokemon_element">
+      <div class="pokemon_element__text">
+        <div class="pokemon_element__title">
+          {{ pokemon.name | uppercase }}
+        </div>
+        <div class="pokemon_element__type">
+          <ng-container *ngFor="let type of pokemon.types">
+            {{ type.type.name | uppercase}}
+          </ng-container>
+        </div>
+      </div>
+      <div class="pokemon_element__img">
+        <img src="{{ pokemon.sprites.front_default}}">
+      </div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,67 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pokemon_element {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &__text {
+    width: 50%;
+    margin: auto;
+    padding-left: 1em;
+  }
+
+  &__title {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5em;
+  }
+
+  &__img {
+    display: inline-flex;
+    width: 50%;
+    img {
+      margin: 0 auto;
+      max-width: 96px;
+      max-height: 96px;
+    }
+  }
+}
+
+.back-fire {
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);
+}
+
+.back-water {
+  background: #00B4DB;
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+  background: linear-gradient(to right, #0083B0, #00B4DB);
+}
+
+.back-grass {
+  background: #ADD100;
+  background: -webkit-linear-gradient(to right, #7B920A, #ADD100);
+  background: linear-gradient(to right, #7B920A, #ADD100);
+}
+
+.back-electric {
+  background: #F2994A;
+  background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);
+  background: linear-gradient(to right, #F2C94C, #F2994A);
+}
+
+.back-generic {
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+}
+
+.back-fly {
+  background: #2980B9;
+  background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+  background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+}

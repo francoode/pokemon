@@ -3,4 +3,5 @@ export class Pokemon {
   evolvesFrom: string;
   sprites: object;
   id: number;
+  types: Array<any>;
 }
