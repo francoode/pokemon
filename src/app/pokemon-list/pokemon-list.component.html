@@ -1,0 +1,11 @@
+<div class="pokemons-container">
+
+  <ng-container *ngFor="let pokemon of pokemons; let i = index">
+    <a [routerLink]="['pokemon', pokemon.id]">
+      <div>
+        {{ pokemon.name }}
+        <img src="{{ pokemon.sprites.front_default}}">
+      </div>
+    </a>
+  </ng-container>
+</div>

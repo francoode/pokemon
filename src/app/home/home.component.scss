@@ -1,0 +1,90 @@
+@mixin border-body {
+  border: black solid 1px;
+  border-radius: 0 0 10px 10px;
+}
+
+$header-height: 15%;
+$body-height: 100% - $header-height;
+
+
+.pokedex {
+  height: 100%;
+  width: 100%;
+
+  &__header {
+    background: red;
+    height: $header-height;
+    display: flex;
+  }
+
+
+  &__light-small-container {
+    display: flex;
+  }
+
+  &__light-big-container {
+
+  }
+
+  &__light {
+    border-radius: 50%;
+    border: black solid 1px;
+
+    &--big {
+      @extend .pokedex__light;
+      height: 50px;
+      width: 50px;
+      border: white solid 3px;
+
+      span {
+
+      }
+
+    }
+
+    &--small {
+      @extend .pokedex__light;
+      height: 10px;
+      width: 10px;
+    }
+
+    &--green {
+      @extend .pokedex__light;
+      background: green;
+    }
+
+    &--blue {
+      @extend .pokedex__light;
+      background: blue;
+    }
+
+    &--red {
+      @extend .pokedex__light;
+      background: red;
+    }
+
+    &--yellow {
+      @extend .pokedex__light;
+      background: yellow;
+    }
+
+  }
+
+
+  &__body {
+    background: red;
+    @include border-body;
+    height: $body-height;
+    display: flex;
+
+
+    &-content {
+      @include border-body;
+      height: calc(100% - 10px);
+      width: calc(100% - 10px);
+      margin: auto;
+    }
+  }
+
+
+}
