@@ -3,7 +3,7 @@ import {SyncService} from './sync.service';
 import {environment} from "../../environments/environment";
 import {HttpClient} from "@angular/common/http";
 import {forkJoin, Observable} from "rxjs";
-import {map, mergeMap} from "rxjs/operators";
+import {mergeMap} from "rxjs/operators";
 import {Pokemon} from "../models/pokemon.model";
 
 @Injectable({
@@ -12,7 +12,7 @@ import {Pokemon} from "../models/pokemon.model";
 export class PokemonService extends SyncService {
 
   protected urlResource = 'pokemon';
-  protected pageSize = 3;
+  protected pageSize = 25;
   protected pageOffset = 0;
 
   public pokemons: Array<Pokemon> = [];
@@ -48,7 +48,6 @@ export class PokemonService extends SyncService {
           return forkJoin(obs);
         }),
         mergeMap((data: Array<any>) => {
-          console.log(this.pokemons);
           data.forEach((sp) => {
             const idx = this.pokemons.findIndex((p) => p.name === sp.name);
             if (idx > -1) {
@@ -64,7 +63,6 @@ export class PokemonService extends SyncService {
   getAllEndPoint(url): string {
     return (url) ? url : `${environment.url}/${this.urlResource}?offset=${this.pageOffset}&limit=${this.pageSize}`;
   }
-
 
 
 }
