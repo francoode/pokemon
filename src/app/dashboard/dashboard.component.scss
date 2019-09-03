@@ -3,6 +3,12 @@
   border-radius: 0 0 10px 10px;
 }
 
+@mixin border-footer-button {
+  -webkit-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+  -moz-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+  box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+}
+
 $header-height: 10%;
 $footer-height: 20%;
 $body-height: 100% - $header-height - $footer-height;
@@ -13,6 +19,8 @@ $primary-color: #ee2d25;
 .pokedex {
   height: 100%;
   width: 100%;
+  max-width: 900px;
+  margin: auto;
 
   &__header {
     background: $primary-color;
@@ -102,15 +110,13 @@ $primary-color: #ee2d25;
     height: 50px;
     background-color: #1f1a1a;
     margin: auto;
-    -webkit-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
-    -moz-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
-    box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
     border-radius: 50%;
+    @include border-footer-button;
   }
 
   @media (max-width: 600px) {
     .pokbuttons {
-      width: 80px;
+      width: 60px;
     }
   }
 

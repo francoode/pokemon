@@ -1,0 +1,50 @@
+@import "../dashboard/dashboard.component";
+
+.buttons-errors {
+  display: flex;
+  height: 50%;
+
+  &__button {
+    height: 20px;
+    width: 25%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: black;
+    border-width: 1px;
+    border-style: solid;
+    @include border-footer-button;
+
+    &--red {
+      @extend .buttons-errors__button;
+      margin-left: auto;
+      margin-right: 10px;
+      background-color: red;
+    }
+
+    &--blue {
+      @extend .buttons-errors__button;
+      margin-right: auto;
+      margin-left: 10px;
+      background-color: blue;
+    }
+  }
+}
+
+
+.error_display {
+  padding: 5px;
+  margin: auto;
+  width: 90%;
+  background-color: #88b52f;
+  border-radius: 20px;
+  height: 100px;
+  @include border-footer-button;
+}
+
+
+@media (max-width: 600px) {
+  .error_display {
+    width: 100%;
+    height: 60px;
+  }
+}
