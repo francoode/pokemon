@@ -3,7 +3,7 @@
   border-radius: 0 0 10px 10px;
 }
 
-$header-height: 15%;
+$header-height: 10%;
 $footer-height: 20%;
 $body-height: 100% - $header-height - $footer-height;
 
@@ -35,8 +35,8 @@ $primary-color: #ee2d25;
 
     &--big {
       @extend .pokedex__light;
-      height: 50px;
-      width: 50px;
+      height: 70px;
+      width: 70px;
       border: white solid 3px;
       box-shadow: inset -19px -14px 17px -12px rgba(255, 255, 255, 0.75);
     }
@@ -94,5 +94,24 @@ $primary-color: #ee2d25;
   &__footer {
     background-color: $primary-color;
     height: $footer-height;
+    text-align: center;
   }
+
+  &__circle-button {
+    width: 50px;
+    height: 50px;
+    background-color: #1f1a1a;
+    margin: auto;
+    -webkit-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+    -moz-box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+    box-shadow: -5px 4px 0px -1px rgba(0, 0, 0, 4.75);
+    border-radius: 50%;
+  }
+
+  @media (max-width: 600px) {
+    .pokbuttons {
+      width: 80px;
+    }
+  }
+
 }
