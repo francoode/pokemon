@@ -9,8 +9,8 @@ import {Observable} from "rxjs";
 export abstract class SyncService {
 
   protected abstract urlResource;
-  protected abstract pageSize = 25;
-  protected abstract pageOffset = 0;
+  protected abstract pageSize;
+  protected abstract pageOffset;
 
   protected constructor(
     protected http: HttpClient
