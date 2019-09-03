@@ -12,6 +12,7 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { PokemonElementComponent } from './pokemon-element/pokemon-element.component';
 import {NgImageSliderModule} from "ng-image-slider";
 import {ReactiveFormsModule} from "@angular/forms";
+import { PokemonMissingnoComponent } from './pokemon-detail/pokemon-missingno/pokemon-missingno.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     DashboardComponent,
     PokemonListComponent,
     PokemonDetailComponent,
-    PokemonElementComponent
+    PokemonElementComponent,
+    PokemonMissingnoComponent
   ],
   imports: [
     BrowserModule,
