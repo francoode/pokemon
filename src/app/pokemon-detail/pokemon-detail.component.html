@@ -1,1 +1,31 @@
-<p>pokemon-detail works!</p>
+<a [routerLink]="['/pokemons-list']"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+<app-pokemon-element *ngIf="pokemon" [pokemon]="pokemon"></app-pokemon-element>
+<hr>
+<div class="extra-data row" *ngIf="pokemon">
+  <div class="col-6">
+    <div class="extra-data__title">Datos</div>
+    <div>
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>Altura {{ pokemon.height }}
+      </div>
+      <div>
+        <i class="fa fa-balance-scale"></i>Peso {{ pokemon.weight }}
+      </div>
+  </div>
+  <div class="col-6">
+    <div class="extra-data__title">Habilidades</div>
+    <div>
+      <ng-container *ngFor="let abi of pokemon.abilities">
+        <div> <i class="fa fa-bolt" aria-hidden="true"></i> {{ abi.ability.name }} </div>
+      </ng-container>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+<hr>
+<ng-image-slider [images]="imageObject" #nav></ng-image-slider>

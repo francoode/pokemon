@@ -1,0 +1,23 @@
+@import "./../pokemon-element/pokemon-element.component";
+
+i {
+  padding-right: 5px;
+}
+a i {
+  font-size: 20px;
+}
+
+.extra-data {
+  @include back;
+  height: 200px;
+  margin: 5px 0;
+  background-color: #f2f6f9;
+  padding: 10px;
+  font-family: 'Luckiest Guy', cursive;
+
+  &__title {
+    font-size: 20px;
+  }
+}
+
+

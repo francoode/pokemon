@@ -9,7 +9,8 @@ import {SyncService} from "./services/sync.service";
 import {HttpClientModule} from "@angular/common/http";
 import {PokemonService} from "./services/pokemon.service";
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
-import { PokemonElementComponent } from './pokemon-list/pokemon-element/pokemon-element.component';
+import { PokemonElementComponent } from './pokemon-element/pokemon-element.component';
+import {NgImageSliderModule} from "ng-image-slider";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PokemonElementComponent } from './pokemon-list/pokemon-element/pokemon-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgImageSliderModule
   ],
   providers: [
   ],
