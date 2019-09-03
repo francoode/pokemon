@@ -23,6 +23,7 @@ export class PokemonService extends SyncService {
 
 
   public getAll(url?) {
+    this.pokemons = [];
     const endPoint = this.getAllEndPoint(url);
     return this.get(endPoint)
       .pipe(

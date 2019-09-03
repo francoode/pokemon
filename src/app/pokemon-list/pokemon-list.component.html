@@ -1,5 +1,9 @@
 <div class="pokemons-container">
-  <ng-container *ngFor="let pokemon of pokemons; let i = index">
+
+    <input type="text" [formControl]="search" class="form-control mb-2" placeholder="Buscar...">
+
+
+  <ng-container *ngFor="let pokemon of filterPokemons; let i = index">
       <app-pokemon-element [pokemon]="pokemon"></app-pokemon-element>
   </ng-container>
 </div>

@@ -11,6 +11,7 @@ import {PokemonService} from "./services/pokemon.service";
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PokemonElementComponent } from './pokemon-element/pokemon-element.component';
 import {NgImageSliderModule} from "ng-image-slider";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {NgImageSliderModule} from "ng-image-slider";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ReactiveFormsModule
   ],
   providers: [
   ],
