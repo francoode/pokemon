@@ -13,6 +13,7 @@ import { PokemonElementComponent } from './pokemon-element/pokemon-element.compo
 import {NgImageSliderModule} from "ng-image-slider";
 import {ReactiveFormsModule} from "@angular/forms";
 import { PokemonMissingnoComponent } from './pokemon-detail/pokemon-missingno/pokemon-missingno.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PokemonMissingnoComponent } from './pokemon-detail/pokemon-missingno/po
     PokemonListComponent,
     PokemonDetailComponent,
     PokemonElementComponent,
-    PokemonMissingnoComponent
+    PokemonMissingnoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
