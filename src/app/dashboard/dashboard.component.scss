@@ -21,6 +21,7 @@ $primary-color: #ee2d25;
   width: 100%;
   max-width: 900px;
   margin: auto;
+  box-shadow: 1px 1px 18px 1px;
 
   &__header {
     background: $primary-color;
@@ -31,10 +32,11 @@ $primary-color: #ee2d25;
 
   &__light-small-container {
     display: flex;
+    margin: 10px 0;
   }
 
   &__light-big-container {
-
+    margin: auto 20px;
   }
 
   &__light {
@@ -47,12 +49,14 @@ $primary-color: #ee2d25;
       width: 70px;
       border: white solid 3px;
       box-shadow: inset -19px -14px 17px -12px rgba(255, 255, 255, 0.75);
+      animation: bluelightanimation 1.5s infinite;
     }
 
     &--small {
       @extend .pokedex__light;
       height: 13px;
       width: 13px;
+      margin-right: 10px;
       box-shadow: inset -12px -12px 4px -12px rgba(255, 255, 255, 0.75);
     }
 
@@ -118,6 +122,40 @@ $primary-color: #ee2d25;
     .pokbuttons {
       width: 60px;
     }
+
+    .pokedex__light-big-container {
+      margin: auto 25px;
+    }
+
+    .pokedex__light--lightblue {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @keyframes bluelightanimation {
+    0% {
+      background-color: #6ccde9;
+    }
+    20% {
+      background-color: #5dc9e8;
+    }
+    30% {
+      background-color: #32b1d6;
+    }
+    40% {
+      background-color: #1883a2;
+    }
+    60% {
+      background-color: #32b1d6;
+    }
+    80% {
+      background-color: #5dc9e8;
+    }
+    100% {
+      background-color: #6ccde9;
+    }
+
   }
 
 }
